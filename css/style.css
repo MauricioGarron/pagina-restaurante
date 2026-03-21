@@ -1,0 +1,11 @@
+.fila {
+  display: flex;
+  flex-direction: row;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */
