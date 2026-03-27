@@ -1,0 +1,136 @@
+@use 'variables' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    @include flex-between;
+    min-height: 8rem;
+    gap: 1.6rem;
+    position: relative;
+  }
+
+  &__actions {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__icon-btn {
+    @include flex-center;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    border: 1px solid $color-border;
+    transition: $transition-base;
+
+    img {
+      width: 1.8rem;
+      height: 1.8rem;
+      object-fit: contain;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.nav {
+  &__toggle {
+    width: 4.4rem;
+    height: 4.4rem;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    @include flex-center;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: $transition-base;
+
+    span {
+      width: 2rem;
+      height: 0.2rem;
+      background-color: $color-white;
+      border-radius: $radius-full;
+    }
+
+    &:hover {
+      border-color: $color-primary;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    width: 100%;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: 2rem;
+    box-shadow: $shadow-md;
+    display: none;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    &.is-open {
+      display: flex;
+    }
+
+    @include tablet {
+      position: static;
+      width: auto;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @include laptop {
+      gap: 2.4rem;
+    }
+  }
+
+  &__item {
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: $transition-base;
+
+    &:hover,
+    &.active {
+      color: $color-primary;
+    }
+  }
+}

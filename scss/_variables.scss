@@ -1,0 +1,147 @@
+// ==========================
+// TIPOGRAFÍA
+// ==========================
+$font-title: 'Georgia', serif;
+$font-text: 'Arial', sans-serif;
+
+// ==========================
+// COLORES
+// ==========================
+$color-primary: #ff9f0d;
+$color-primary-dark: #e98f00;
+$color-bg: #0d0d0d;
+$color-surface: #111111;
+$color-card: #1a1a1a;
+$color-card-2: #222222;
+$color-white: #ffffff;
+$color-text: #e6e6e6;
+$color-muted: #a1a1a1;
+$color-border: rgba(255, 255, 255, 0.08);
+$color-overlay: rgba(0, 0, 0, 0.6);
+$color-success: #22c55e;
+$color-danger: #ef4444;
+
+// ==========================
+// ESPACIADOS
+// ==========================
+$space-xs: 0.8rem;
+$space-sm: 1.2rem;
+$space-md: 1.6rem;
+$space-lg: 2.4rem;
+$space-xl: 3.2rem;
+$space-2xl: 4.8rem;
+$space-3xl: 6.4rem;
+$space-4xl: 8rem;
+
+// ==========================
+// RADIOS
+// ==========================
+$radius-sm: 0.8rem;
+$radius-md: 1.6rem;
+$radius-lg: 2.4rem;
+$radius-xl: 3.2rem;
+$radius-full: 999px;
+
+// ==========================
+// SOMBRAS
+// ==========================
+$shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.15);
+$shadow-md: 0 12px 32px rgba(0, 0, 0, 0.25);
+$shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.35);
+
+// ==========================
+// TRANSICIONES
+// ==========================
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.45s ease;
+
+// ==========================
+// BREAKPOINTS
+// ==========================
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1280px;
+
+// ==========================
+// MIXINS RESPONSIVE
+// ==========================
+@mixin mobile {
+  @media (min-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $bp-laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+// ==========================
+// MIXINS DE APOYO
+// ==========================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin section-space {
+  padding: 6rem 0;
+
+  @include tablet {
+    padding: 8rem 0;
+  }
+
+  @include laptop {
+    padding: 10rem 0;
+  }
+}
+
+@mixin title-style {
+  font-family: $font-title;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $color-white;
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: $radius-full;
+  border: none;
+  font-weight: 700;
+  text-decoration: none;
+  transition: $transition-base;
+  cursor: pointer;
+}
+
+@mixin card-style {
+  background-color: $color-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+}
