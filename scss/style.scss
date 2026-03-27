@@ -1,0 +1,251 @@
+@use 'variables' as *;
+@use 'header';
+@use 'home';
+@use 'services';
+@use 'contact';
+@use 'footer';
+@use 'responsive';
+
+// ==========================
+// RESET
+// ==========================
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-text;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: $color-bg;
+  color: $color-text;
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
+
+  @include tablet {
+    overflow: auto;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  overflow: hidden;
+}
+
+// ==========================
+// CLASES GLOBALES
+// ==========================
+.container {
+  width: min(100% - 3.2rem, 132rem);
+  margin-inline: auto;
+}
+
+.section {
+  @include section-space;
+}
+
+.section-tag {
+  display: inline-block;
+  color: $color-primary;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  @include title-style;
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+
+  @include tablet {
+    font-size: 4rem;
+  }
+
+  @include laptop {
+    font-size: 4.8rem;
+  }
+}
+
+.section-text {
+  color: $color-muted;
+  font-size: 1.5rem;
+  max-width: 62rem;
+}
+
+.section-heading {
+  margin-bottom: 4rem;
+
+  &--center {
+    text-align: center;
+
+    .section-text {
+      margin-inline: auto;
+    }
+  }
+
+  &--light {
+    .section-title,
+    .section-text {
+      color: $color-white;
+    }
+  }
+}
+
+.btn {
+  @include button-base;
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--secondary {
+    border: 1px solid $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-primary;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.logo {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: $color-white;
+
+  span {
+    color: $color-primary;
+  }
+}
+
+.slider-btn {
+  @include flex-center;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  background-color: $color-card;
+  border: 1px solid $color-border;
+  transition: $transition-base;
+
+  img {
+    width: 1.8rem;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    transform: translateY(-2px);
+  }
+
+  &--small {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.video-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: $color-white;
+
+  &__icon {
+    @include flex-center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+
+    img {
+      width: 1.8rem;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+  }
+}
+
+.page-decor {
+  position: fixed;
+  z-index: -1;
+  opacity: 0.08;
+  pointer-events: none;
+
+  &--leaf-left {
+    top: 8rem;
+    left: -4rem;
+    width: 14rem;
+    height: 28rem;
+    background: radial-gradient(circle, $color-primary 0%, transparent 70%);
+  }
+
+  &--leaf-right {
+    right: -5rem;
+    bottom: 8rem;
+    width: 18rem;
+    height: 32rem;
+    background: radial-gradient(circle, $color-primary 0%, transparent 70%);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

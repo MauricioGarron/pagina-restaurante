@@ -1,0 +1,182 @@
+@use 'variables' as *;
+
+.footer {
+  background-color: $color-surface;
+  border-top: 1px solid $color-border;
+
+  &__top {
+    padding: 6rem 0 4rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include laptop {
+      grid-template-columns: 1.3fr 1fr 0.8fr 1fr;
+      gap: 3rem;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+  }
+
+  &__text {
+    color: $color-muted;
+    margin-bottom: 2rem;
+    max-width: 32rem;
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &__contact-list,
+  &__links,
+  &__bottom-links {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: $color-muted;
+
+    img {
+      width: 1.8rem;
+      margin-top: 0.3rem;
+      flex-shrink: 0;
+    }
+  }
+
+  &__links a,
+  &__bottom-links a {
+    color: $color-muted;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    a {
+      border-radius: $radius-sm;
+      overflow: hidden;
+      display: block;
+
+      img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        transition: $transition-base;
+      }
+
+      &:hover img {
+        transform: scale(1.06);
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $color-border;
+    padding: 2rem 0;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__copy {
+    color: $color-muted;
+    font-size: 1.4rem;
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid $color-border;
+  border-radius: $radius-full;
+  overflow: hidden;
+  max-width: 38rem;
+  background-color: $color-card;
+  margin-bottom: 2rem;
+
+  &__input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: $color-white;
+    padding: 1.4rem 1.6rem;
+    outline: none;
+
+    &::placeholder {
+      color: $color-muted;
+    }
+  }
+
+  &__button {
+    width: 5rem;
+    height: 5rem;
+    @include flex-center;
+    background-color: $color-primary;
+    transition: $transition-base;
+
+    img {
+      width: 1.8rem;
+    }
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  a {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    border: 1px solid $color-border;
+    @include flex-center;
+    transition: $transition-base;
+
+    img {
+      width: 1.8rem;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      transform: translateY(-2px);
+    }
+  }
+}
