@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getVisibleCount() {
     const width = window.innerWidth;
-    if (width >= 1024) return 4;
-    if (width >= 480) return 2;
+    if (width > 1024) return 3;
+    if (width > 398) return 2;
     return 1;
   }
 
