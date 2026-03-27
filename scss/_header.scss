@@ -28,6 +28,7 @@
   }
 
   &__icon-btn {
+    background-color: $color-white;
     @include flex-center;
     width: 4.2rem;
     height: 4.2rem;

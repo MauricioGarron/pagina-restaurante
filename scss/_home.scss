@@ -206,6 +206,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    overflow: hidden;
+    position: relative;
 
     @include laptop {
       grid-template-columns: auto 1fr auto;
@@ -222,17 +224,10 @@
   }
 
   &__track {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     gap: 2rem;
-
-    @include mobile {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include laptop {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    transition: transform $transition-base;
+    will-change: transform;
   }
 }
 
@@ -240,6 +235,8 @@
   @include card-style;
   overflow: hidden;
   transition: $transition-base;
+  width: 25rem;
+  flex-shrink: 0;
 
   &:hover {
     transform: translateY(-6px);

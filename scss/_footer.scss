@@ -114,6 +114,19 @@
     color: $color-muted;
     font-size: 1.4rem;
   }
+
+  &__attribution {
+    color: $color-muted;
+    font-size: 1.2rem;
+
+    a {
+      color: $color-primary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .newsletter-form {
