@@ -1,11 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodtuck</title>
+  <meta
+    name="description"
+    content="Foodtuck restaurant landing page with hero, menu, categories, team, testimonials, blog, and footer."
+  />
+  <link rel="stylesheet" href="dist/css/styles.css" />
 </head>
 <body>
-    
+  <!-- Decorative fixed elements -->
+  <div class="page-decor page-decor--leaf-left" aria-hidden="true"></div>
+  <div class="page-decor page-decor--leaf-right" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="home">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#home" class="logo" aria-label="Foodtuck home">Foodtuck</a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="nav__menu" id="nav-menu">
+            <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+            <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+            <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="#pages" class="nav__link">Pages</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#shop" class="nav__link">Shop</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="header__icon-btn" type="button" aria-label="Search">
+            <img src="assets/icons/search.svg" alt="" />
+          </button>
+          <button class="header__icon-btn" type="button" aria-label="User account">
+            <img src="assets/icons/user.svg" alt="" />
+          </button>
+          <button class="header__icon-btn" type="button" aria-label="Shopping cart">
+            <img src="assets/icons/cart.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <p class="section-tag">Healthy &amp; Tasty Food</p>
+            <h1 class="hero__title">Enjoy Healthy Life &amp; Tasty Food.</h1>
+            <p class="hero__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
+            </p>
+
+            <div class="hero__buttons">
+              <a href="#about" class="btn btn--primary">Show more</a>
+              <a href="#menu" class="btn btn--secondary">Place an order</a>
+            </div>
+
+            <div class="hero__scroll">
+              <span class="hero__scroll-line"></span>
+              <span class="hero__scroll-text">Scroll down</span>
+            </div>
+          </div>
+
+          <div class="hero__media">
+            <div class="hero__shape"></div>
+            <img
+              src="assets/images/hero-salad.png"
+              alt="Healthy bowl with vegetables"
+              class="hero__image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__gallery">
+            <img
+              src="assets/images/about-1.jpg"
+              alt="Tacos on a plate"
+              class="about__img about__img--large"
+            />
+            <img
+              src="assets/images/about-2.jpg"
+              alt="Sauce being poured on food"
+              class="about__img about__img--small-top"
+            />
+            <img
+              src="assets/images/about-3.jpg"
+              alt="Pasta dish"
+              class="about__img about__img--small-bottom"
+            />
+          </div>
+
+          <div class="about__content">
+            <p class="section-tag">About us</p>
+            <h2 class="section-title">Food is an important part Of a balanced Diet</h2>
+            <p class="section-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
+              pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
+              augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
+              sed vitae mus risus.
+            </p>
+
+            <div class="about__actions">
+              <a href="#menu" class="btn btn--primary">Show more</a>
+              <button class="video-btn" type="button" aria-label="Watch video">
+                <span class="video-btn__icon">
+                  <img src="assets/icons/play.svg" alt="" />
+                </span>
+                <span class="video-btn__text">Watch video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Category -->
+    <section class="categories section" id="pages">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="section-tag">Food category</p>
+          <h2 class="section-title">Food category</h2>
+          <p class="section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Varius sed pharetra dictum neque massa congue.
+          </p>
+        </div>
+
+        <div class="categories__slider">
+          <button class="slider-btn slider-btn--prev" type="button" aria-label="Previous category">
+            <img src="assets/icons/arrow-left.svg" alt="" />
+          </button>
+
+          <div class="categories__track">
+            <article class="category-card">
+              <figure class="category-card__figure">
+                <img src="assets/images/category-1.jpg" alt="Grand Italiano dish" />
+              </figure>
+              <div class="category-card__content">
+                <h3 class="category-card__title">Grand Italiano</h3>
+                <p class="category-card__price">$26.00</p>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <figure class="category-card__figure">
+                <img src="assets/images/category-2.jpg" alt="Pene Salmone dish" />
+              </figure>
+              <div class="category-card__content">
+                <h3 class="category-card__title">Pene Salmone</h3>
+                <p class="category-card__price">$22.00</p>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <figure class="category-card__figure">
+                <img src="assets/images/category-3.jpg" alt="Molto Tagliatelle dish" />
+              </figure>
+              <div class="category-card__content">
+                <h3 class="category-card__title">Molto Tagliatelle</h3>
+                <p class="category-card__price">$28.00</p>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <figure class="category-card__figure">
+                <img src="assets/images/category-4.jpg" alt="Pepperoni tagli dish" />
+              </figure>
+              <div class="category-card__content">
+                <h3 class="category-card__title">Pepperoni tagli</h3>
+                <p class="category-card__price">$20.00</p>
+              </div>
+            </article>
+          </div>
+
+          <button class="slider-btn slider-btn--next" type="button" aria-label="Next category">
+            <img src="assets/icons/arrow-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why We Are Best -->
+    <section class="why-us section">
+      <div class="container">
+        <div class="why-us__inner">
+          <div class="why-us__gallery">
+            <img
+              src="assets/images/why-1.jpg"
+              alt="Chef preparing ingredients"
+              class="why-us__img why-us__img--left"
+            />
+            <img
+              src="assets/images/why-2.jpg"
+              alt="Pasta bowl"
+              class="why-us__img why-us__img--right"
+            />
+          </div>
+
+          <div class="why-us__content">
+            <p class="section-tag">Why Choose us</p>
+            <h2 class="section-title">Why We are the best?</h2>
+            <p class="section-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
+              pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
+              augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
+              sed vitae mus risus.
+            </p>
+            <p class="section-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Varius sed pharetra dictum neque massa congue.
+            </p>
+
+            <div class="why-us__features">
+              <article class="feature-item">
+                <div class="feature-item__icon">
+                  <img src="assets/icons/delivery.svg" alt="" />
+                </div>
+                <div class="feature-item__content">
+                  <h3 class="feature-item__title">Fast Delivery</h3>
+                </div>
+              </article>
+
+              <article class="feature-item">
+                <div class="feature-item__icon">
+                  <img src="assets/icons/clock.svg" alt="" />
+                </div>
+                <div class="feature-item__content">
+                  <h3 class="feature-item__title">24/7 services</h3>
+                </div>
+              </article>
+
+              <article class="feature-item">
+                <div class="feature-item__icon">
+                  <img src="assets/icons/food.svg" alt="" />
+                </div>
+                <div class="feature-item__content">
+                  <h3 class="feature-item__title">Fresh food</h3>
+                </div>
+              </article>
+
+              <article class="feature-item">
+                <div class="feature-item__icon">
+                  <img src="assets/icons/quality.svg" alt="" />
+                </div>
+                <div class="feature-item__content">
+                  <h3 class="feature-item__title">Quality maintain</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="section-tag">Our Food Menu</p>
+          <h2 class="section-title">Our Food Menu</h2>
+          <p class="section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Varius sed pharetra dictum neque massa congue.
+          </p>
+        </div>
+
+        <div class="menu__tabs" role="tablist" aria-label="Food menu categories">
+          <button class="menu__tab active" type="button" role="tab" aria-selected="true">Breakfast</button>
+          <button class="menu__tab" type="button" role="tab" aria-selected="false">Lunch</button>
+          <button class="menu__tab" type="button" role="tab" aria-selected="false">Dinner</button>
+          <button class="menu__tab" type="button" role="tab" aria-selected="false">Dessert</button>
+          <button class="menu__tab" type="button" role="tab" aria-selected="false">Drink</button>
+          <button class="menu__tab" type="button" role="tab" aria-selected="false">Snack</button>
+        </div>
+
+        <div class="menu__list">
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__body">
+              <h3 class="menu-item__title">Alder Grilled Chinook Salmon</h3>
+              <p class="menu-item__desc">Toasted French bread topped with romano, cheddar</p>
+              <span class="menu-item__meta">560 CAL</span>
+            </div>
+            <span class="menu-item__price">$25</span>
+          </article>
+        </div>
+
+        <div class="menu__actions">
+          <a href="#shop" class="btn btn--secondary">View menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team section" id="shop">
+      <div class="team__bg"></div>
+      <div class="container">
+        <div class="section-heading section-heading--center section-heading--light">
+          <p class="section-tag">Team Member</p>
+          <h2 class="section-title">Team Member</h2>
+          <p class="section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Varius sed pharetra dictum neque massa congue.
+          </p>
+        </div>
+
+        <div class="team__grid">
+          <article class="team-card">
+            <figure class="team-card__figure">
+              <img src="assets/images/team-1.jpg" alt="Mark Henry, Owner" />
+            </figure>
+            <div class="team-card__content">
+              <h3 class="team-card__name">Mark Henry</h3>
+              <p class="team-card__role">Owner</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <figure class="team-card__figure">
+              <img src="assets/images/team-2.jpg" alt="Lucky Helen, Chef" />
+            </figure>
+            <div class="team-card__content">
+              <h3 class="team-card__name">Lucky Helen</h3>
+              <p class="team-card__role">Chef</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <figure class="team-card__figure">
+              <img src="assets/images/team-3.jpg" alt="Moon Henry, Founder" />
+            </figure>
+            <div class="team-card__content">
+              <h3 class="team-card__name">Moon Henry</h3>
+              <p class="team-card__role">Founder</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <figure class="team-card__figure">
+              <img src="assets/images/team-4.jpg" alt="Tom Merrow, Specialist" />
+            </figure>
+            <div class="team-card__content">
+              <h3 class="team-card__name">Tom Merrow</h3>
+              <p class="team-card__role">Specialist</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial section" id="testimonial">
+      <div class="container">
+        <div class="testimonial__inner">
+          <div class="testimonial__content">
+            <p class="section-tag">Testimonials</p>
+            <h2 class="section-title">Customer Review</h2>
+
+            <blockquote class="testimonial__quote">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
+                pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
+                augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
+                sed vitae mus risus, at dapibus sit eu, vel et consectetur.
+              </p>
+            </blockquote>
+
+            <div class="testimonial__author">
+              <img
+                src="assets/images/customer.jpg"
+                alt="Abdur Rahman"
+                class="testimonial__avatar"
+              />
+              <div>
+                <h3 class="testimonial__name">Abdur Rahman</h3>
+                <p class="testimonial__role">Customer</p>
+              </div>
+            </div>
+
+            <div class="testimonial__controls">
+              <button type="button" class="slider-btn slider-btn--small" aria-label="Previous testimonial">
+                <img src="assets/icons/arrow-left.svg" alt="" />
+              </button>
+              <button type="button" class="slider-btn slider-btn--small" aria-label="Next testimonial">
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="testimonial__media">
+            <figure class="testimonial__image-wrap">
+              <img
+                src="assets/images/testimonial-food.jpg"
+                alt="Food plate"
+                class="testimonial__image"
+              />
+            </figure>
+
+            <article class="order-card">
+              <div class="order-card__top">
+                <span class="order-card__label">Order now</span>
+                <span class="order-card__price">$10.00</span>
+              </div>
+              <div class="order-card__rating" aria-label="5 star rating">
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
+              </div>
+              <p class="order-card__text">
+                Lorem ipsum dolor sit amet, consectetur elit. Quisque diam pellentesque
+                bibendum feugiat tempus donec id magna risus.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog section" id="blog">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="section-tag">Latest News &amp; Blog</p>
+          <h2 class="section-title">Latest news &amp; Blog</h2>
+          <p class="section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Varius sed pharetra dictum neque massa congue.
+          </p>
+        </div>
+
+        <div class="blog__grid">
+          <article class="blog-card">
+            <figure class="blog-card__figure">
+              <img src="assets/images/blog-1.jpg" alt="Chocolate truffle cake" />
+            </figure>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>20 Feb 2022</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="#">Chocolate Truffle Cake With Honey Flavor</a>
+              </h3>
+              <p class="blog-card__text">
+                Lorem ipsum dolor sit amet, consectetur elit. Non mi sed etiam at id
+                ultrices tempus. Tempus,proin diam imperdiet at a sit.
+              </p>
+              <a href="#" class="blog-card__link">Read more</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <figure class="blog-card__figure">
+              <img src="assets/images/blog-2.jpg" alt="Chocolate truffle cake" />
+            </figure>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>20 Feb 2022</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="#">Chocolate Truffle Cake With Honey Flavor</a>
+              </h3>
+              <p class="blog-card__text">
+                Lorem ipsum dolor sit amet, consectetur elit. Non mi sed etiam at id
+                ultrices tempus. Tempus,proin diam imperdiet at a sit.
+              </p>
+              <a href="#" class="blog-card__link">Read more</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <figure class="blog-card__figure">
+              <img src="assets/images/blog-3.jpg" alt="Chocolate truffle cake" />
+            </figure>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span>20 Feb 2022</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="blog-card__title">
+                <a href="#">Chocolate Truffle Cake With Honey Flavor</a>
+              </h3>
+              <p class="blog-card__text">
+                Lorem ipsum dolor sit amet, consectetur elit. Non mi sed etiam at id
+                ultrices tempus. Tempus,proin diam imperdiet at a sit.
+              </p>
+              <a href="#" class="blog-card__link">Read more</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partners section">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="section-tag">Partners &amp; Clients</p>
+          <h2 class="section-title">We work with the best people</h2>
+        </div>
+
+        <div class="partners__logos">
+          <img src="assets/images/partner-1.png" alt="Restaurant partner logo" />
+          <img src="assets/images/partner-2.png" alt="Bakery partner logo" />
+          <img src="assets/images/partner-3.png" alt="Cafe partner logo" />
+          <img src="assets/images/partner-4.png" alt="Restaurant partner logo" />
+          <img src="assets/images/partner-5.png" alt="Bistro partner logo" />
+          <img src="assets/images/partner-6.png" alt="Bakery partner logo" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__column footer__column--brand">
+            <a href="#home" class="logo footer__logo">Foodtuck</a>
+            <p class="footer__text">
+              Subscribe our newsletter and get discount 25%off
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+              <label class="sr-only" for="newsletter-email">Email address</label>
+              <input
+                type="email"
+                id="newsletter-email"
+                name="email"
+                class="newsletter-form__input"
+                placeholder="Enter Your Email"
+              />
+              <button class="newsletter-form__button" type="submit" aria-label="Submit email">
+                <img src="assets/icons/send.svg" alt="" />
+              </button>
+            </form>
+
+            <ul class="social-list" aria-label="Social media links">
+              <li><a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" /></a></li>
+              <li><a href="#" aria-label="Twitter"><img src="assets/icons/twitter.svg" alt="" /></a></li>
+              <li><a href="#" aria-label="Pinterest"><img src="assets/icons/pinterest.svg" alt="" /></a></li>
+              <li><a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" /></a></li>
+              <li><a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" /></a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Contact us</h3>
+            <ul class="footer__contact-list">
+              <li>
+                <img src="assets/icons/location.svg" alt="" />
+                <span>Kolkata India, 3rd Floor, Office 45</span>
+              </li>
+              <li>
+                <img src="assets/icons/phone.svg" alt="" />
+                <a href="tel:+0005559655960">000055 9655960</a>
+              </li>
+              <li>
+                <img src="assets/icons/mail.svg" alt="" />
+                <a href="mailto:mail@support.com">Mailysupport@food.com</a>
+              </li>
+              <li>
+                <img src="assets/icons/clock.svg" alt="" />
+                <span>Sun - Sat / 10:00 AM - 8:00 PM</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Links</h3>
+            <ul class="footer__links">
+              <li><a href="#about">About us</a></li>
+              <li><a href="#contact">Contact us</a></li>
+              <li><a href="#menu">Our Menu</a></li>
+              <li><a href="#shop">Team</a></li>
+              <li><a href="#blog">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">Instagram Gallery</h3>
+            <div class="footer__gallery">
+              <a href="#"><img src="assets/images/gallery-1.jpg" alt="Instagram food gallery 1" /></a>
+              <a href="#"><img src="assets/images/gallery-2.jpg" alt="Instagram food gallery 2" /></a>
+              <a href="#"><img src="assets/images/gallery-3.jpg" alt="Instagram food gallery 3" /></a>
+              <a href="#"><img src="assets/images/gallery-4.jpg" alt="Instagram food gallery 4" /></a>
+              <a href="#"><img src="assets/images/gallery-5.jpg" alt="Instagram food gallery 5" /></a>
+              <a href="#"><img src="assets/images/gallery-6.jpg" alt="Instagram food gallery 6" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copy">Copyright © 2020 code-arts. All rights reserved</p>
+
+          <ul class="footer__bottom-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term of Use</a></li>
+            <li><a href="#">Partner</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
