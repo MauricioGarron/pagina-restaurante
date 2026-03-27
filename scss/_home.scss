@@ -203,23 +203,31 @@
 // ==========================
 .categories {
   &__slider {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 2rem;
     overflow: hidden;
     position: relative;
 
     @include laptop {
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
+      justify-content: center;
     }
   }
 
   .slider-btn {
-    display: none;
-
-    @include laptop {
+    @include tablet {
       display: flex;
+    }
+  }
+
+  &__container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+
+    @include tablet {
+      max-width: 70%;
     }
   }
 
@@ -238,6 +246,10 @@
   width: 25rem;
   flex-shrink: 0;
 
+  @media (max-width: 768px) {
+    width: 24rem;
+  }
+  
   &:hover {
     transform: translateY(-6px);
     box-shadow: $shadow-md;
